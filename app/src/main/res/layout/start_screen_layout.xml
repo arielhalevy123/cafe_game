@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartScreen">
+
+    <LinearLayout
+        android:id="@+id/start_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+
+        <EditText
+            android:id="@+id/player_name_input"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"/>
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:text="@string/start" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_default"/>
+        <Button
+            android:id="@+id/btn_start_sens"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:text="@string/start_with_sensors" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/margin_default"/>
+        <Button
+            android:id="@+id/btn_leaderboard"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:text="@string/leader_board" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/leaderboard_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:text="Leader Board"
+            android:textColor="@color/black"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/leaderboard_content"
+            android:layout_width="264dp"
+            android:layout_height="300dp"
+            android:text="TextView"
+            android:textSize="25sp"/>
+        <Button
+            android:id="@+id/btn_high_score_map"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="Show High Score Map" />
+
+        <Button
+            android:id="@+id/btn_back_to_start"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="back" />
+
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- מיכל המפה -->
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map_fragment_container"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <!-- כפתור חזור מעל המפה -->
+        <Button
+            android:id="@+id/btn_back_from_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_gravity="top|start"
+            android:layout_margin="16dp"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+
+
+
+
+</RelativeLayout>

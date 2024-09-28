@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Yarcafe_game</string>
+    <string name="left_arrow"><![CDATA[<—]]></string>
+    <string name="right_arrow"><![CDATA[—>]]></string>
+    <string name="start">start with arrows</string>
+    <string name="leader_board">leader Board</string>
+    <string name="title_activity_start_screen">StartSCREEN</string>
+    <string name="start_with_sensors">start with sensors</string>
+</resources>

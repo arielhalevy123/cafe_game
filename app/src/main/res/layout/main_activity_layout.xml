@@ -1,0 +1,136 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_100"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/IMG_avatar"
+        android:layout_width="@dimen/avatar_width"
+        android:layout_height="@dimen/avatar_height"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/avatar_margin_bottom"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="400dp"
+        app:srcCompat="@drawable/avatar_ariel" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_default">
+
+        <Button
+            android:id="@+id/IMG_left_arrow"
+            android:layout_width="@dimen/arrow_width"
+            android:layout_height="@dimen/arrow_height"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:text="@string/left_arrow"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/IMG_right_arrow"
+            android:layout_width="@dimen/arrow_width"
+            android:layout_height="@dimen/arrow_height"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="@dimen/margin_default"
+            android:text="@string/right_arrow"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/LBL_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:textColor="@color/black"
+        android:textSize="24pt"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_default"/>
+
+    <!-- Game Over Section -->
+    <LinearLayout
+        android:id="@+id/game_over_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#80000000"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/game_over_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game Over!"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/final_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: 0"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/player_name_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player: Anonymous"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_back_to_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back to Start"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="top">
+        <ImageView
+            android:id="@+id/cafe0"
+            android:layout_width="@dimen/heart_width"
+            android:layout_height="@dimen/heart_height"
+            android:src="@drawable/cafegreen" />
+
+        <ImageView
+            android:id="@+id/cafe1"
+            android:layout_width="@dimen/heart_width"
+            android:layout_height="@dimen/heart_height"
+            android:src="@drawable/cafepink"/>
+
+        <ImageView
+            android:id="@+id/cafe2"
+            android:layout_width="@dimen/heart_width"
+            android:layout_height="@dimen/heart_height"
+            android:src="@drawable/cafered"
+
+         />
+
+    </LinearLayout>
+</RelativeLayout>
